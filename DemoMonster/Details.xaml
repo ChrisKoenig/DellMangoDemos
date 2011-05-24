@@ -32,10 +32,10 @@
                     Grid.Row="0"
                     Margin="12,17,0,28">
             <TextBlock x:Name="ApplicationTitle"
-                       Text="MY APPLICATION"
+                       Text="PDC@DELL"
                        Style="{StaticResource PhoneTextNormalStyle}" />
             <TextBlock x:Name="PageTitle"
-                       Text="page name"
+                       Text="details"
                        Margin="9,-7,0,0"
                        Style="{StaticResource PhoneTextTitle1Style}" />
         </StackPanel>
@@ -46,12 +46,20 @@
               Margin="12,0,12,0">
             <StackPanel>
                 <Button Content="Pin Me!"
-                        Click="PinButton_Click" />
-                <TextBlock Text="Display Name" />
+                        FontSize="{StaticResource PhoneFontSizeLarge}"
+                        Click="PinButton_Click"
+                        Margin="0,0,0,50" />
+                <TextBlock FontSize="{StaticResource PhoneFontSizeExtraLarge}"
+                           Margin="0,0,0,10"
+                           Text="Display Name" />
                 <TextBlock Text="{Binding DisplayName}"
-                           Margin="0,0,0,20" />
-                <TextBlock Text="Address" />
+                           FontSize="{StaticResource PhoneFontSizeLarge}"
+                           Margin="0,0,0,50" />
+                <TextBlock Text="Address"
+                           Margin="0,0,0,10"
+                           FontSize="{StaticResource PhoneFontSizeExtraLarge}" />
                 <TextBlock Text="{Binding Addresses[0].PhysicalAddress, Converter={StaticResource AddressDisplayConverter}}"
+                           FontSize="{StaticResource PhoneFontSizeLarge}"
                            Margin="0,0,0,20" />
             </StackPanel>
         </Grid>

@@ -9,7 +9,7 @@
                             d:DesignWidth="480"
                             d:DesignHeight="768"
                             FontFamily="{StaticResource PhoneFontFamilyNormal}"
-                            FontSize="{StaticResource PhoneFontSizeNormal}"
+                            FontSize="{StaticResource PhoneFontSizeLarge}"
                             Foreground="{StaticResource PhoneForegroundBrush}"
                             SupportedOrientations="Portrait"
                             Orientation="Portrait"
@@ -28,10 +28,10 @@
                     Grid.Row="0"
                     Margin="12,17,0,28">
             <TextBlock x:Name="ApplicationTitle"
-                       Text="MY APPLICATION"
+                       Text="PDC@DELL"
                        Style="{StaticResource PhoneTextNormalStyle}" />
             <TextBlock x:Name="PageTitle"
-                       Text="page name"
+                       Text="main page"
                        Margin="9,-7,0,0"
                        Style="{StaticResource PhoneTextTitle1Style}" />
         </StackPanel>
@@ -42,6 +42,7 @@
               Margin="12,0,12,0">
             <StackPanel>
                 <HyperlinkButton Content="Contact List"
+                                 FontSize="{StaticResource PhoneFontSizeLarge}"
                                  NavigateUri="/ContactList.xaml" />
             </StackPanel>
         </Grid>

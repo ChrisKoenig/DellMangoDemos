@@ -28,10 +28,10 @@
                     Grid.Row="0"
                     Margin="12,17,0,28">
             <TextBlock x:Name="ApplicationTitle"
-                       Text="MY APPLICATION"
+                       Text="PDC@DELL"
                        Style="{StaticResource PhoneTextNormalStyle}" />
             <TextBlock x:Name="PageTitle"
-                       Text="page name"
+                       Text="contacts"
                        Margin="9,-7,0,0"
                        Style="{StaticResource PhoneTextTitle1Style}" />
         </StackPanel>
@@ -45,9 +45,11 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <ListBox x:Name="ContactsListBox"
+                     FontSize="{StaticResource PhoneFontSizeExtraLarge}"
                      SelectionChanged="ContactsListBox_SelectionChanged" />
             <Button Content="Select"
                     Grid.Row="1"
+                    FontSize="{StaticResource PhoneFontSizeLarge}"
                     Click="Button_Click" />
         </Grid>
     </Grid>
