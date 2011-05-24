@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -17,6 +18,8 @@ namespace DemoMonster
 {
     public partial class Details : PhoneApplicationPage
     {
+        Random r = new Random();
+
         public Details()
         {
             InitializeComponent();
@@ -50,7 +53,7 @@ namespace DemoMonster
             var key = contact.DisplayName;
             Uri uri = new Uri("/Details.xaml?name=" + key, UriKind.Relative);
             var item = ShellTile.ActiveTiles.FirstOrDefault(x => x.NavigationUri == uri);
-            var initialData = GetInitialData(contact);
+            var initialData = GetInitialData(contact, item);
             if (item == null) // there is no pinned item for this contact
             {
                 ShellTile.Create(uri, initialData);
@@ -61,22 +64,21 @@ namespace DemoMonster
             }
         }
 
-        private StandardTileData GetInitialData(Contact contact)
+        private StandardTileData GetInitialData(Contact contact, ShellTile data)
         {
             return new StandardTileData
             {
                 Title = contact.DisplayName,
-                Count = GetRandomNumber1to10(),
+                Count = GetRandomNumber1To99(),
                 BackgroundImage = new Uri("/Images/DellFront.png", UriKind.Relative),
                 BackBackgroundImage = new Uri("/Images/DellBack.png", UriKind.Relative),
                 BackTitle = DateTime.Now.ToShortDateString(),
             };
         }
 
-        private int GetRandomNumber1to10()
+        private int GetRandomNumber1To99()
         {
-            Random r = new Random();
-            return r.Next(1, 10);
+            return r.Next(1, 99);
         }
     }
 }

@@ -36,6 +36,7 @@
                        Style="{StaticResource PhoneTextNormalStyle}" />
             <TextBlock x:Name="PageTitle"
                        Text="details"
+                       Foreground="{StaticResource PhoneAccentBrush}"
                        Margin="9,-7,0,0"
                        Style="{StaticResource PhoneTextTitle1Style}" />
         </StackPanel>
@@ -51,11 +52,13 @@
                         Margin="0,0,0,50" />
                 <TextBlock FontSize="{StaticResource PhoneFontSizeExtraLarge}"
                            Margin="0,0,0,10"
+                           Foreground="{StaticResource PhoneAccentBrush}"
                            Text="Display Name" />
                 <TextBlock Text="{Binding DisplayName}"
                            FontSize="{StaticResource PhoneFontSizeLarge}"
                            Margin="0,0,0,50" />
                 <TextBlock Text="Address"
+                           Foreground="{StaticResource PhoneAccentBrush}"
                            Margin="0,0,0,10"
                            FontSize="{StaticResource PhoneFontSizeExtraLarge}" />
                 <TextBlock Text="{Binding Addresses[0].PhysicalAddress, Converter={StaticResource AddressDisplayConverter}}"

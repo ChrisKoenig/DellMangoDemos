@@ -31,6 +31,7 @@
                        Text="PDC@DELL"
                        Style="{StaticResource PhoneTextNormalStyle}" />
             <TextBlock x:Name="PageTitle"
+                       Foreground="{StaticResource PhoneAccentBrush}"
                        Text="contacts"
                        Margin="9,-7,0,0"
                        Style="{StaticResource PhoneTextTitle1Style}" />
